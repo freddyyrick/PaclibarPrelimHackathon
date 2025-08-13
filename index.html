@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>🚀 Space Explorer Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="darkspace.mp4" type="video/mp4" id="dark-video-source">
+        <source src="whitespace.mp4" type="video/mp4" id="light-video-source">
+    </video>
+
+    <div class="control-buttons">
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+        <button id="sound-toggle" aria-label="Toggle sound" title="Toggle sound">🔊</button>
+    </div>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>🚀 Space Explorer Quiz</h1>
+        </div>
+
+        <!-- Start Screen Content -->
+        <div id="start-screen">
+            <p class="start-tagline">Embark on a cosmic mission of knowledge!</p>
+            <button id="start-btn" class="start-btn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Content -->
+        <div id="quiz-content" style="display: none;">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p id="question-text">Question goes here...</p>
+            <div id="options-container" class="options"></div>
+            <p id="score-text">Score: 0</p>
+        </div>
+
+        <!-- Results Content -->
+        <div id="results-container" class="results" style="display: none;">
+            <h2>🌌 Mission Complete!</h2>
+            <p id="final-score"></p>
+            <button id="restart-btn">Restart Mission</button>
+        </div>
+
+        <!-- Game Sounds -->
+        <audio id="start-sound" src="startmusic.mp3" preload="auto"></audio>
+        <audio id="game-music" src="during_game.mp3" preload="auto" loop></audio>
+        <audio id="end-music" src="endmusic.mp3" preload="auto"></audio>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+    <audio id="wrong-sound" src="wrong.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
